@@ -12,8 +12,9 @@
 
 ### What this is
 
-Every project built here gets its own repository, its own subdomain and a real deployment — not a
-screenshot and a dead link. The portfolio is generated from what is actually running.
+Every project built here gets its own repository. Deployable web projects get a subdomain and a
+real deployment; libraries, desktop tools and work in progress are labelled honestly. The
+portfolio is generated from the same registry that describes deployment state.
 
 It started as one person's way of keeping a track record, and is open to people they work with.
 Projects keep their authors' names on them.
@@ -42,13 +43,14 @@ path is defined once and improvements reach every repository at the same time.
 1. Create your repository from the project template.
 2. Build it. Give each deployable folder a `Dockerfile`.
 3. Open a pull request registering it, with a name, a one-line summary and the resources it needs.
-4. On merge it gets a subdomain, a deployment, and a card on the site.
+4. On merge it gets a card on the site and, when deployable, a subdomain and deployment.
 
 Full instructions are in [CONTRIBUTING.md](https://github.com/project-graphite/.github/blob/main/CONTRIBUTING.md).
 
 ### The bar
 
-A project is listed once it has a README that explains what it is, a screenshot, a live link, and
-instructions someone else could follow to run it. Work in progress is welcome and is labelled as
-such. Abandoned work is labelled too, rather than quietly deleted — the record is more useful
-honest than tidy.
+A project is listed once it has a README that explains what it is and instructions someone else
+could follow to run it. Deployable projects add a screenshot and live link before being marked
+`live`. Work in progress and source-only projects are welcome and labelled as such. Abandoned
+work is labelled too, rather than quietly deleted — the record is more useful when honest than
+tidy.
