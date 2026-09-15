@@ -52,4 +52,4 @@ needs; the values live on the host. Every push is scanned, and a committed secre
 ## Reviews
 
 Your own project repository is yours — merge what you like there. Changes to `platform`, `actions`
-or `portfolio` need a review, because they affect everyone's deployments.
+or `graphite-hub` need a review, because they affect everyone's deployments.
