@@ -6,6 +6,9 @@
 [project-template](https://github.com/project-graphite/project-template) — use *Use this template*,
 not a fork. It carries the CI wiring, the compose setup and the layout conventions.
 
+The template and platform registry are private to organisation members. If either link returns
+404, ask a maintainer to add you to the `contributors` team before continuing.
+
 Name it in lowercase with hyphens. The name becomes the subdomain, so `game-forge` is served at
 `game-forge.project-graphite.com`.
 
@@ -22,9 +25,9 @@ Keep code in a named folder even when there is only one — image names are deri
 | `Makefile` | `make install`, `make lint`, `make test` |
 | neither | nothing beyond the image build |
 
-**4. Write the README.** What it is, a screenshot or short GIF, the live link, the stack, and how
-to run it locally. This is what people actually read, and it is what decides whether the project
-gets listed.
+**4. Write the README.** Explain what it is, the stack and how to run it locally. Add a screenshot
+or short GIF when the project has a visual interface, and add the live link before marking a
+deployable project `live`. This is what people actually read.
 
 **5. Register it.** Open a pull request on the `platform` repository adding
 `projects/<slug>.yml`. The README there documents every field. You will be asked about the
