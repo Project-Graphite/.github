@@ -14,7 +14,7 @@
 
 Every project built here gets its own repository. Deployable web projects get a subdomain and a
 real deployment; libraries, desktop tools and work in progress are labelled honestly. The
-portfolio is generated from the same registry that describes deployment state.
+Graphite Hub is generated from the same registry that describes deployment state.
 
 It started as one person's way of keeping a track record, and is open to people they work with.
 Projects keep their authors' names on them.
