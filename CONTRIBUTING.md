@@ -27,7 +27,7 @@ Keep code in a named folder even when there is only one — image names are deri
 
 **4. Write the README.** Explain what it is, the stack and how to run it locally. Add a screenshot
 or short GIF when the project has a visual interface, and add the live link before marking a
-deployable project `live`. This is what people actually read.
+deployable project `live`.
 
 **5. Register it.** Edit `.graphite.yml` at the repository root. The template's copy registers
 `project-template` itself, so set `slug` to the repository name and replace the rest of the entry

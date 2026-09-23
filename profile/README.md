@@ -13,7 +13,7 @@
 ### What this is
 
 Every project built here gets its own repository. Deployable web projects get a subdomain and a
-real deployment; libraries, desktop tools and work in progress are labelled honestly. The
+real deployment; libraries, desktop tools and work in progress are labelled by status. The
 Graphite Hub is generated from the same registry that describes deployment state.
 
 It started as one person's way of keeping a track record, and is open to people they work with.
@@ -53,5 +53,4 @@ Full instructions are in [CONTRIBUTING.md](https://github.com/project-graphite/.
 A project is listed once it has a README that explains what it is and instructions someone else
 could follow to run it. Deployable projects add a screenshot and live link before being marked
 `live`. Work in progress and source-only projects are welcome and labelled as such. Abandoned
-work is labelled too, rather than quietly deleted — the record is more useful when honest than
-tidy.
+work is labelled too, rather than quietly deleted.
