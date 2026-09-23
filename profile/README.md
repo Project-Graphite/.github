@@ -42,8 +42,9 @@ path is defined once and improvements reach every repository at the same time.
 
 1. Create your repository from the project template.
 2. Build it. Give each deployable folder a `Dockerfile`.
-3. Open a pull request registering it, with a name, a one-line summary and the resources it needs.
-4. On merge it gets a card on the site and, when deployable, a subdomain and deployment.
+3. Fill in its `.graphite.yml` with a name, summary, status and deployment, and push it to `main`.
+4. Once the entry validates, a listed project gets a card on the site. A deployable project gets
+   its subdomain and deployment when it is set up on the shared host.
 
 Full instructions are in [CONTRIBUTING.md](https://github.com/project-graphite/.github/blob/main/CONTRIBUTING.md).
 

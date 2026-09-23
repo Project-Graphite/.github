@@ -29,10 +29,11 @@ Keep code in a named folder even when there is only one — image names are deri
 or short GIF when the project has a visual interface, and add the live link before marking a
 deployable project `live`. This is what people actually read.
 
-**5. Register it.** Open a pull request on the `platform` repository adding
-`projects/<slug>.yml`. The README there documents every field. You will be asked about the
-summary, the resources requested and any secrets needed — the host is shared, so these are
-reviewed rather than rubber-stamped.
+**5. Register it.** Edit `.graphite.yml` at the repository root. The template's copy registers
+`project-template` itself, so set `slug` to the repository name and replace the rest of the entry
+with your project's details. The comments in the file describe every field. When the file changes
+on `main`, the `Registry` workflow asks [`platform`](https://github.com/project-graphite/platform)
+to sync it into `projects/<slug>.yml`, and the entry is merged once it validates.
 
 Until that entry is merged, CI builds and checks run normally and only the deploy step is blocked,
 with a message saying so.
