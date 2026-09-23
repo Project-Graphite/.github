@@ -7,5 +7,6 @@ disagreements focused on the work. Harassment, threats, discrimination, doxxing,
 are not acceptable.
 
 Maintainers may edit or remove contributions and restrict participation when necessary to protect the
-community. To report conduct privately, contact an organization owner using the contact information on
-their GitHub profile. Reports will be handled as confidentially as practical.
+community. To report conduct privately, email the address on the
+[Project Graphite organization profile](https://github.com/Project-Graphite). Reports will be handled as
+confidentially as practical.

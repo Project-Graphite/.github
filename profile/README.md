@@ -31,12 +31,12 @@ my-project/
 └── worker/Dockerfile
 ```
 
-A top-level folder containing a `Dockerfile` is a service. That single convention is what CI uses
-to decide what to lint, what to build and what to deploy, so adding a service means adding a
-folder and nothing else.
+A top-level folder containing a `Dockerfile` is a service. CI uses that convention to decide what
+to lint, build and publish, so adding a service means adding a folder and, for a deployed project,
+listing it in `compose.production.yaml`.
 
-Projects do not write their own pipelines. They call shared workflows, so the build and deploy
-path is defined once and improvements reach every repository at the same time.
+Projects created from the template call the shared workflows in `actions`, so the build and deploy
+path is defined once and improvements reach every project that uses them.
 
 ### Adding a project
 

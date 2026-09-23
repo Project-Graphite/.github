@@ -41,14 +41,15 @@ with a message saying so.
 ## Conventions
 
 **Pull request titles** follow `type(scope): summary`, using one of `feat fix chore refactor docs
-test ci perf revert style build`. Merges are squashed, so the title becomes the commit message on
+test ci perf revert style build`. Squash-merge with the pull request title as the commit title on
 `main`.
 
 **Pull requests get a size label** based on changed lines, excluding lockfiles. Large ones are not
 blocked, but they are slower to review and more likely to sit.
 
 **Secrets never go in a repository.** The registry entry names the environment variables a service
-needs; the values live on the host. Every push is scanned, and a committed secret fails the build.
+needs; the values live on the host. Pull requests in repositories made from the template are
+scanned with Gitleaks, and a committed secret fails their `Secrets` check.
 
 ## Reviews
 
