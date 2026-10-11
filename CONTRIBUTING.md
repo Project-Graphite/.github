@@ -6,9 +6,6 @@
 [project-template](https://github.com/project-graphite/project-template) — use *Use this template*,
 not a fork. It carries the CI wiring, the compose setup and the layout conventions.
 
-The template and platform registry are private to organisation members. If either link returns
-404, ask a maintainer to add you to the `contributors` team before continuing.
-
 Name it in lowercase with hyphens. The name becomes the subdomain, so `game-forge` is served at
 `game-forge.project-graphite.com`.
 
