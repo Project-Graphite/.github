@@ -35,6 +35,12 @@ to sync it into `projects/<slug>.yml`, and the entry is merged once it validates
 Until that entry is merged, CI builds and checks run normally and only the deploy step is blocked,
 with a message saying so.
 
+**6. Deploy it.** Open a pull request in `platform` adding `deploy/<slug>/values.yaml`, which says
+how the project runs in production; the
+[platform README](https://github.com/project-graphite/platform#values) lists every field. Ask an
+organisation owner to add the secret values it names. Once the values are merged, every push to
+`main` deploys the new image.
+
 ## Conventions
 
 **Pull request titles** follow `type(scope): summary`, using one of `feat fix chore refactor docs

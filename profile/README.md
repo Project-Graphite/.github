@@ -33,7 +33,7 @@ my-project/
 
 A top-level folder containing a `Dockerfile` is a service. CI uses that convention to decide what
 to lint, build and publish, so adding a service means adding a folder and, for a deployed project,
-listing it in `compose.production.yaml`.
+listing it in the project's values in [`platform`](https://github.com/project-graphite/platform).
 
 Projects created from the template call the shared workflows in `actions`, so the build and deploy
 path is defined once and improvements reach every project that uses them.
@@ -44,7 +44,8 @@ path is defined once and improvements reach every project that uses them.
 2. Build it. Give each deployable folder a `Dockerfile`.
 3. Fill in its `.graphite.yml` with a name, summary, status and deployment, and push it to `main`.
 4. Once the entry validates, a listed project gets a card on the site. A deployable project gets
-   its subdomain and deployment when it is set up on the shared host.
+   its subdomain once its `deploy/<slug>/values.yaml` is merged in `platform` and an owner has added
+   its secrets.
 
 Full instructions are in [CONTRIBUTING.md](https://github.com/project-graphite/.github/blob/main/CONTRIBUTING.md).
 
