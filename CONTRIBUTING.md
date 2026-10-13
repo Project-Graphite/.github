@@ -41,6 +41,9 @@ how the project runs in production; the
 organisation owner to add the secret values it names. Once the values are merged, every push to
 `main` deploys the new image.
 
+A static site (`deploy.kind: pages`) needs only `enabled: true` in its values, with an optional
+`tag` pin. Every push to `main` then builds it and uploads it to Cloudflare Pages.
+
 ## Conventions
 
 **Pull request titles** follow `type(scope): summary`, using one of `feat fix chore refactor docs
@@ -50,11 +53,14 @@ test ci perf revert style build`. Squash-merge with the pull request title as th
 **Pull requests get a size label** based on changed lines, excluding lockfiles. Large ones are not
 blocked, but they are slower to review and more likely to sit.
 
-**Secrets never go in a repository.** The registry entry names the environment variables a service
-needs; the values live on the host. Pull requests in repositories made from the template are
-scanned with Gitleaks, and a committed secret fails their `Secrets` check.
+**Secrets never go in a repository.** A project's platform values list the secret names under
+`secrets:`; the values live in the owners-only `secrets` repository, and its **Apply** workflow
+posts them to the VPS. Pull requests in repositories made from the template are scanned with
+Gitleaks, and a committed secret fails their `Secrets` check.
 
 ## Reviews
 
-Your own project repository is yours — merge what you like there. Changes to `platform`, `actions`
-or `graphite-hub` need a review, because they affect everyone's deployments.
+Your own project repository is yours — merge what you like there. The six platform repositories
+(`actions`, `platform`, `project-template`, `docs`, `.github`, `graphite-hub`) take changes only
+through a pull request with one approval, because they affect everyone's deployments. Members of
+`contributors` push branches to them directly and open pull requests from there, not from forks.
