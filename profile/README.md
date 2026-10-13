@@ -44,7 +44,7 @@ path is defined once and improvements reach every project that uses them.
 2. Build it. Give each deployable folder a `Dockerfile`.
 3. Fill in its `.graphite.yml` with a name, summary, status and deployment, and push it to `main`.
 4. Once the entry validates, a listed project gets a card on the site. A deployable project gets
-   its subdomain once its `deploy/<slug>/values.yaml` is merged in `platform` and an owner has added
+   its subdomain once its `deploy/<slug>/` folder is merged in `platform` and an owner has added
    its secrets.
 
 Full instructions are in [CONTRIBUTING.md](https://github.com/project-graphite/.github/blob/main/CONTRIBUTING.md).
