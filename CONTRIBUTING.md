@@ -35,13 +35,13 @@ to sync it into `projects/<slug>.yml`, and the entry is merged once it validates
 Until that entry is merged, CI builds and checks run normally and only the deploy step is blocked,
 with a message saying so.
 
-**6. Deploy it.** Open a pull request in `platform` adding `deploy/<slug>/values.yaml`, which says
-how the project runs in production; the
-[platform README](https://github.com/project-graphite/platform#values) lists every field. Ask an
-organisation owner to add the secret values it names. Once the values are merged, every push to
-`main` deploys the new image.
+**6. Deploy it.** Open a pull request in `platform` adding `deploy/<slug>/core.yaml`, what runs,
+and `deploy/<slug>/values.yaml`, its settings; the
+[platform README](https://github.com/project-graphite/platform#projects) shows the smallest project
+and `platform/charts/core/values.yaml` lists every option. Ask an organisation owner to add the
+secret values it names. Once it is merged, every push to `main` deploys the new image.
 
-A static site (`deploy.kind: pages`) needs only `enabled: true` in its values, with an optional
+A static site (`deploy.kind: pages`) needs only `deploy/<slug>/values.yaml` with `enabled: true`, and an optional
 `tag` pin. Every push to `main` then builds it and uploads it to Cloudflare Pages.
 
 ## Conventions
